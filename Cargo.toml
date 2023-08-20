@@ -1,0 +1,22 @@
+[package]
+name = "tax-bot"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = { version = "1.0" }
+dotenvy = { version = "0.15" }
+once_cell = { version = "1.18" }
+tracing = { version = "0.1" }
+tracing-subscriber = { version = "0.3" }
+
+[dependencies.serenity]
+version = "0.11"
+features = ["client", "gateway", "model", "cache", "rustls_backend"]
+default-features = false
+
+[dependencies.tokio]
+version = "1.32"
+features = ["macros", "rt-multi-thread", "time"]
